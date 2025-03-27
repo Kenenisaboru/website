@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Static Website</title>
+    <link rel="stylesheet" href="wb.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content Styles */
+        .container {
+            padding: 10px;
+        }
+
+        .content {
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @kenu (max-width: 20px) {
+            nav a {
+                float: none;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="C:\Users\HP\Desktop#about">About</a>
+        <a href="#services">Services <br>webdevelopment<br>Graphics desighner<br>Digital Marketing</a>
+        <a href="#contact"> contact <br>0983701428</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <section id="home" class="content">
+            <h2>Home</h2>
+            <p>This is the home section of the website. Welcome to our site where you can find various information and ser  <img src="myphoto.jpg" alt="My Photo" style="width:200px;height:200px;">vices, especially about web development.</p>
+            <img src="c:\Users\HP\Pictures\1729437250183.jpg" alt="My Photo" style="width:200px;height:200px;">
+        </section>
+        
+
+        <section id="about" class="content">
+            <h2>About</h2>
+            <p>This is the about section of the website. Here you can learn more about our web development and our mission.</p>
+            <p>My mission is to start a business in the area of technology, especially in web development, by 2026.</p>
+        </section>
+
+        <section id="services" class="content">
+            <h2>Services</h2>
+            <p>This is the services section of the website. We offer a wide range of services to meet your needs.</p>
+        </section>
+
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <p>This is the contact section of the website. Feel free to get in touch with us through the provided information. Contact me at 0983701428.</p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>@Kenuwith&; 2025 My First Website build by Kenenisa Boru. All rights reserved.</p>
+    </footer>
+     <!-- JavaScript Section -->
+     <script>
+        // JavaScript code goes here
+
+        // Example: Alert message when clicking on the Contact link
+        document.querySelector('a[href="#contact"]').addEventListener('click', function() {
+            alert('You clicked on the Contact link!');
+        });
+        document.querySelector('a[href="#services"]').addEventListener('click', function() {
+            alert('You clicked on the Services link!');
+        });
+        document.querySelector('a[href="#about"]').addEventListener('click', function() {
+            alert('You clicked on the About link!');
+        });
+     // Example: Alert message when clicking on the Home link
+        document.querySelector('a[href="#home"]').addEventListener('click', function() {
+            alert('You clicked on the Home link!');
+        });
+
+        // Example: Smooth scrolling to sections
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
